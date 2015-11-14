@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
-
-/* GET home page. */
+var TCPServer = require('../TCP/server.js');
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
@@ -9,5 +8,7 @@ router.get('/', function(req, res, next) {
 router.get('/ask', function(req, res, next) {
 	res.send("1");
 });
+
+console.log(TCPServer.HOST);
 
 module.exports = router;

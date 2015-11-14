@@ -12,7 +12,7 @@ TCPServer.prototype = {
 		this.port = port;
 	},
 
-	createServer() {
+	create() {
 		this.server = net.createServer(this.connectionHandler.bind(this));
 	},
 
@@ -31,8 +31,9 @@ TCPServer.prototype = {
 	},
 
 	start() {
+		var p = this.port;
 		this.server.listen(this.port, function() {
-			console.log("Server listening on port " + this.port + "...");
+			console.log("Server listening on port " + p + "...");
 		});
 	},
 

@@ -5,11 +5,6 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var routes = require('./routes/index');
-var fs = require("fs");
-var sqlite3 = require("sqlite3").verbose();
-
-var file = "./database/feeder.db";
-var db = new sqlite3.Database(file);
 var app = express();
 
 // view engine setup
@@ -57,10 +52,3 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
-
-// Set up database
-db.serialize(function() {
-	db.run("CREATE TABLE IF NOT EXISTS  Feeder (last_feed BIGINT)");
-});
-
-db.close();

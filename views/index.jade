@@ -3,7 +3,10 @@ extends layout
 block content
 	.ui.one.column.doubling.stackable.grid.container
 		.column
-			form.ui.form(action='/feed')
+			form.ui.form(action='/feed', method='POST')
 				.field
-					label#last Last feed
+					span#last
+						|	last time you feed is 
+						span#period= period
+						|	days ago
 					button.ui.inverted.green.button(type='submit') Feed

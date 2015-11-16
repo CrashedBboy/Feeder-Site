@@ -1,5 +1,9 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+	.ui.one.column.doubling.stackable.grid.container
+		.column
+			form.ui.form(action='/feed')
+				.field
+					label#last Last feed
+					button.ui.inverted.green.button(type='submit') Feed

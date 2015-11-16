@@ -38,8 +38,11 @@ TCPServer.prototype = {
 	},
 
 	response(msg) {
+		var tmp = msg;
 		this.sock.forEach(function(element, index, array){
-			element.write(msg);
+			element.pause();
+			element.write(tmp);
+			element.resume();
 		});
 	}
 }

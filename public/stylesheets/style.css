@@ -1,8 +1,22 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+#last {
+	text-align: center;
+	color: white;
+	font-size: 2em;
+	display: block;
+	margin-bottom: 5%;
+	letter-spacing: 5px;
 }
 
-a {
-  color: #00B7FF;
+button {
+	width: 70%;
+	margin: 0 15% !important;
+	height: 110px;
+	font-size: 2rem !important;
+	letter-spacing: 20px;
+}
+
+body {
+	margin-top: 40vh;
+	background-color: black;
+	height: 100px;
 }

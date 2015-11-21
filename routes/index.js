@@ -25,7 +25,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/test', function(req, res, next) {
-	server.response("Hello!");
+	server.feed();
 	res.send("1");
 });
 
@@ -45,7 +45,7 @@ router.get('/db', function(req, res, next) {
 });
 
 router.post('/feed', function(req, res, next) {
-	server.response('feed');
+	server.feed();
 	var stmt = db.prepare("UPDATE Feeder SET last_feed = ? WHERE rowid = 1");
 	stmt.run(Math.floor(new Date().getTime()/1000));
 	stmt.finalize();

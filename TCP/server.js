@@ -37,11 +37,10 @@ TCPServer.prototype = {
 		});
 	},
 
-	response(msg) {
-		var tmp = msg;
+	feed() {
 		this.sock.forEach(function(element, index, array){
 			element.pause();
-			element.write(tmp);
+			element.write("feedmyfish");
 			element.resume();
 		});
 	}

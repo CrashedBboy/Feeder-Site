@@ -1,6 +1,6 @@
 # Feeder-Site
 Web control interface for Arduino fish feeder  
-checkc [Fish-Feeder](https://github.com/CrashedBboy/Feeder) for more detail of feeder side.
+check [Fish-Feeder](https://github.com/CrashedBboy/Feeder) for more detail of feeder side.
 
 ## 1.Setup
 Take Ubuntu 14.04 as example:  
